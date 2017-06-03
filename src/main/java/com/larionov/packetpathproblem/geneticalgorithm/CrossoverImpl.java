@@ -58,7 +58,7 @@ public class CrossoverImpl implements Crossover<PacketPath> {
         }
 
         if (father.getDestinationNode() != mother.getDestinationNode()) {
-            LOGGER.warn("Destionation nodes aren't equals: father = {}; mother = {}", father, mother);
+            LOGGER.warn("Destination nodes aren't equals: father = {}; mother = {}", father, mother);
             return false;
         }
 

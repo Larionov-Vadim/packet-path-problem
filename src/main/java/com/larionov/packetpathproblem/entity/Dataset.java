@@ -26,7 +26,7 @@ public class Dataset {
 
     private boolean isValidSource() {
         if (!isValidNode(sourceNode)) {
-            LOGGER.warn("Incorrect source node = {}", sourceNode);
+            LOGGER.warn("Incorrect source node {}", sourceNode);
             return false;
         }
         return true;
@@ -34,7 +34,7 @@ public class Dataset {
 
     private boolean isValidDestination() {
         if (!isValidNode(destinationNode)) {
-            LOGGER.warn("Incorrect destination node = {}", destinationNode);
+            LOGGER.warn("Incorrect destination node {}", destinationNode);
             return false;
         }
         return true;

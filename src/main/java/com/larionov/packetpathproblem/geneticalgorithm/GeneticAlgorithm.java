@@ -35,8 +35,6 @@ public class GeneticAlgorithm {
         Matrix matrix = dataset.getMatrix();
 
         List<PacketPath> population = createPopulation(sourceNode, destinationNode, populationSize, numberOfNodes);
-        population.forEach(System.out::println);
-
         for (int i = 0; i < context.getMaxEpochs(); ++i) {
             population = createNewPopulation(population, matrix);
             population.forEach(mutation::mutate);
@@ -44,10 +42,6 @@ public class GeneticAlgorithm {
 
         return getTheBestPacketPath(population, matrix);
     }
-
-//    private List<PacketPath> processEpoch(List<PacketPath> population, Matrix matrix) {
-//
-//    }
 
     private List<PacketPath> createNewPopulation(List<PacketPath> population, Matrix matrix) {
         int numberOfRandomCandidates = context.getNumberOfRandomCandidates();

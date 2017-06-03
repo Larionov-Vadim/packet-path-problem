@@ -34,8 +34,8 @@ public class Main {
 
     private static Context createContext() {
         Context context = new Context();
-        context.setMutationRate(0.0001);
-        context.setMaxEpochs(10);
+        context.setMutationRate(0.001);
+        context.setMaxEpochs(100);
         context.setPopulationSize(500);
         context.setNonExistingPathWeight(1_000_000);
         context.setNumberOfRandomCandidates(10);
